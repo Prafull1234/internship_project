@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Answer {
@@ -12,7 +13,7 @@ public class Answer {
 	@Column(name="answer_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int ansId;
-	
+	@OneToOne
 	String answer;
 
 	public int getAnsId() {
